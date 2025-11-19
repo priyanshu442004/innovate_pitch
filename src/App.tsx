@@ -9,7 +9,6 @@ import Features from "./pages/FeaturesPage";
 import Testimonial from "./pages/TestimonialPage";
 import RootLayout from "./outlet/RootLayout";
 import Solution from "./pages/SolutionPage";
-import { GoogleOAuthProvider } from "@react-oauth/google";
 import DashboardLayout from "./layout/DashboardLayout";
 import DashboardHome from "./pages/dashboard/DashboardHome";
 import MyPitches from "./pages/dashboard/MyPitches";
@@ -17,7 +16,6 @@ import RecordedSessions from "./pages/dashboard/RecordedSessions";
 import Judges from "./pages/dashboard/Judges";
 import Score from "./pages/dashboard/Score";
 import Settings from "./pages/dashboard/Settings";
-const Client_id = import.meta.env.VITE_GOOGLE_CLIENT_ID;
 
 export default function App() {
 
@@ -74,9 +72,9 @@ const router = createBrowserRouter([
 
 
   return (
-  <GoogleOAuthProvider clientId={Client_id}>
+  
   <RouterProvider router = {router}></RouterProvider>
-  </GoogleOAuthProvider>
+ 
    
   );
 }
